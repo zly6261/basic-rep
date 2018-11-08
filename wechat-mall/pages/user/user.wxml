@@ -1,0 +1,4 @@
+<text>
+       userpage
+</text>
+    <tabBar pagenum="{{pageindex}}"></tabBar>

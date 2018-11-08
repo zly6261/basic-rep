@@ -1,0 +1,59 @@
+
+<!--store index.wxml-->
+<scroll-view  class="container" scroll-y='true' style="height:{{windowHeight}}px" bindscrolltolower='loadMoreImg'>
+    
+    <view class="header">
+       <view class="iconfont icon-menu leftMenu"></view>
+       <text class="storeTitle">DStore</text>
+       <view class="iconfont icon-search search"></view>
+    </view>
+    <!-- 轮播 -->
+    <swiper class="swiper01" autoplay indicator-dots interval="5000" duration="500">
+        <block wx:key="{{index}}" wx:for="{{imgUrls}}" wx:if="{{index < 4}}">
+            <swiper-item>
+             <view  style="background-image:url(https://mp.lotaai.com/{{item.path}})" class="slide-image">
+                <text class="imgTitle">{{item.title}}</text>
+             </view>
+            </swiper-item>
+        </block>
+    </swiper>
+    <!-- 热点商品 -->   
+    <view class="tag">HOT PRODUCT</view>
+    <view class="hotGoods">
+        <view class="hgleft">
+            <view class="hgBkg" wx:key="{{index}}" wx:for="{{hotgoods}}"  wx:if="{{index < 2 }}" style="background-image:url(https://mp.lotaai.com/{{item.images}})">
+              <view class="hgleftTextBOX">
+                   <text class="hg-price hg-text">¥{{item.price}}</text>
+                    <text class="hg-title hg-text">{{item.title}}</text>
+              </view>
+                
+            </view>
+        </view>
+        <view class="hg" wx:key="{{index}}" wx:for="{{hotgoods}}" wx:if="{{index > 1 }}">
+            <view  class="hgBkg" style="background-image:url(https://mp.lotaai.com/{{item.images}})">
+             <view class="hgleftTextBOX">
+                <text class="hg-price hg-text">¥{{item.price}}</text>
+                <text class="hg-title hg-text">{{item.title}}</text> 
+                 </view>
+            </view>
+        </view>
+    </view>
+
+     <!-- 商品列表 -->
+
+     <view class="goods-box">
+            <view class="goods-item" wx:key="{{index}}" wx:for="{{goodsList}}" 
+                style="width:50%;position:absolute;top:{{item.top}}px;left:{{item.left}}px">
+                     <view style="height:{{item.height}}px">
+                        <image  src="https://mp.lotaai.com/{{item.images}}"
+                        bindload='loadImage' data-index="{{index}}"  />
+                     </view>
+                     <text class="goods-title black">{{item.title}}</text>
+                     <text class="goods-price">¥{{item.price}}</text>
+            </view>
+             
+     </view>
+    
+</scroll-view>
+  <!-- 底部导航栏 -->
+  <tabBar  pagenum="{{pageindex}}" ></tabBar>

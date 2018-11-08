@@ -1,0 +1,5 @@
+<text>
+discover
+ 
+</text> 
+    <tabBar pagenum="{{pageindex}}"></tabBar>

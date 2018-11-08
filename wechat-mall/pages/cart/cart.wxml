@@ -1,0 +1,4 @@
+<text>
+cartpage
+</text>
+    <tabBar pagenum="{{pageindex}}"></tabBar>
