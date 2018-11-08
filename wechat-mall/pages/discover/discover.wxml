@@ -10,6 +10,7 @@
     </swiper-item>
   </block>
 </swiper>
+<view class="tag">HOT PRODUCT</view>
 
 
     <tabBar pagenum="{{pageindex}}"></tabBar>
