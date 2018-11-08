@@ -1,5 +1,15 @@
-<text>
-discover
- 
-</text> 
+<view class='header x-row'>
+  <view class='x-col-center'><i class='iconfont icon-fenlei headerPhoto'></i></view>
+  <view class='x-col x-col-center headerText'>DStore</view>
+  <view class='x-col-center'><i class='iconfont icon-sousuo'></i></view>
+</view>
+<swiper class='Allphotos' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}">
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" mode='aspectFill' class='tutu'></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+
     <tabBar pagenum="{{pageindex}}"></tabBar>
