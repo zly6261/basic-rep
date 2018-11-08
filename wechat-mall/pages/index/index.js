@@ -92,6 +92,7 @@ Page({
             self.setData({
               imgUrls:res.data.data.shopAd
             })
+            console.log(self.data.imgUrls)
         }
       })
    }
