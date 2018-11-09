@@ -4,10 +4,12 @@
   <view class='x-col-center'><i class='iconfont icon-sousuo'></i></view>
 </view>
 <swiper class='Allphotos' indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}">
-  <view class='photoTitle'>全新黑白</view>
   <block wx:for="{{imgUrls}}">
     <swiper-item>
       <image src="{{item}}" mode='aspectFill' class='tutu'></image>
+      <view class='photoTitle' wx:for='{{titleText}}'>
+        <text class='titleText'>{{titleText}}</text>
+      </view>
     </swiper-item>
   </block>
 </swiper>
