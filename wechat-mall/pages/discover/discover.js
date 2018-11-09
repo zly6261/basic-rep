@@ -6,19 +6,24 @@ Page({
    */
   data: {
     pageindex: 1,
-    imgUrls: ['https://mp.lotaai.com//upload/adImage/WechatIMG511.jpeg',
-      // 'https://mp.lotaai.com//upload/adImage/WechatIMG50.jpeg',
-      // 'https://mp.lotaai.com//upload/adImage/WechatIMG52.jpeg',
-      // 'https://mp.lotaai.com//upload/adImage/WechatIMG533.jpeg',
+    imgUrls:[
+        {
+          path:'https://mp.lotaai.com//upload/adImage/WechatIMG511.jpeg',
+          title: '全新黑白 Off-White x Nike Zoom Fly SP'
+        },
+        {
+          path: 'https://mp.lotaai.com///upload/adImage/WechatIMG50.jpeg',
+          title: '要风度也要温度，你的衣柜少了一件卫衣'
+        },
+        {
+          path:'https://mp.lotaai.com//upload/adImage/WechatIMG52.jpeg',
+          title:'BAPE x READYMADE 联名@RBRICK发售'
+        },
+        {
+          path: 'https://mp.lotaai.com//upload/adImage/WechatIMG533.jpeg',
+          title: 'The NorthFace x Supreme'
+        }
       ],
-    indicatorDots: true, //是否显示面板指示点
-    autoplay: true, //是否自动切换
-    interval: 250, //自动切换时间间隔
-    duration: 150, //滑动动画时长
-    titleText:[
-      '全新黑白 Off-White x Nike Zoom Fly SP',
-      // '要风度也要温度，你的衣柜少了一件卫衣',
-    ],
   },
 
   /**

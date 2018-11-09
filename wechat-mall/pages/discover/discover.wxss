@@ -12,14 +12,13 @@
   height: 180px;
 }
 .photoTitle{
-  padding: 5px;
   background-color:#0000006b;
   position:relative;     /* 相对定位,原本所占的空间不会改变 */
   top:-60px; 
-}
-.titleText{
   text-align: right;
   color: #fff;
+  font-size: 15px;
+  padding: 5px;
 }
 .tutu{
   width: 100%;
