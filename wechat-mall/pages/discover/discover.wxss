@@ -29,6 +29,34 @@
   padding:10px 30px;
   color:#2a2a2a;
 }
+.storeBox{
+  padding: 0px 10px;
+  overflow: auto;    /* 自动换行，滚动条查看  */
+}
+.commidityBox{
+  width: 50%;
+  padding: 5px 10px;
+  float: left;
+}
+.storeBox .commidityPhoto{
+  height: 155px;
+}
+.storeBox .commidity{
+  width:100%;
+  height: 100%;
+}
+.storeBox .commidityText{
+  font-size: 12px;
+}
+.price{
+  font-size: 10px;
+}
+.pastPrice{
+  text-decoration: line-through;
+  font-size: 10px;
+  text-align: right;
+  padding-left: 25px;
+}
 
 
 /*  充满整列  */
