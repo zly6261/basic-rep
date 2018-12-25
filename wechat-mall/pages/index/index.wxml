@@ -17,6 +17,7 @@
             </swiper-item>
         </block>
     </swiper>
+    <text>{{noderes}}</text>
     <!-- 热点商品 -->   
     <view class="tag">HOT PRODUCT</view>
     <view class="hotGoods">
