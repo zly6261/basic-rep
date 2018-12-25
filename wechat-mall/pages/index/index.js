@@ -14,7 +14,8 @@ Page({
     windowHeight:'',
     harr:[0,0],
     imglen:0,
-    pageindex:0
+    pageindex:0,
+    noderes:''
   },
   onLoad:function(){
     let self = this
@@ -36,15 +37,14 @@ Page({
  
 //图片请求完毕方法，瀑布流布局
    loadImage : function(e){
-       let owidth =  e.detail.width,
+       let owidth =  e.detail.width,//获取图片原始高宽
            oheight =  e.detail.height,
            index = e.currentTarget.dataset.index,
-           goodsWidth =this.data.goodsWidth,//获取图片原始高宽
+           goodsWidth =this.data.goodsWidth,
            goodsHeight =this.data.goodsHeight,
            goodsList = this.data.goodsList,
            harr = this.data.harr;
            goodsHeight =goodsWidth * (oheight / owidth) //计算图片等比高度
-
            var firtColH = this.data.harr[0], secondColH = this.data.harr[1];//图片高度数组
 
            var obj = goodsList[index];
@@ -64,8 +64,16 @@ Page({
             })
    },
   loadMoreImg: function () {//商品图片信息请求
-
+   
     let self = this
+    wx.request({
+      url: 'http://192.168.0.112:8080/',
+      success(res) {
+        self.setData({
+          noderes: res.data
+          })
+      }
+    })
       wx.request({
         url: 'https://mp.lotaai.com/xcxlogin/shopHome?shop_store_id=2',
         header: {'content-type': 'application/json'},
